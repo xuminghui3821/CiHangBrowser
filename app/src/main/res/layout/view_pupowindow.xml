@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="#00000000"
+    android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:id="@+id/pop_range"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="54dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="10dp">
+        <!--android:layout_height="190dp"-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/pop_mymark_parent"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/pop_mymark"
+                    style="@style/BottomPopItem"
+                    android:background="@drawable/mymark_selecter" />
+
+                <TextView
+                    style="@style/BottomPopItemText"
+                    android:text="书签"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pop_history_parent"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/pop_history"
+                    style="@style/BottomPopItem"
+                    android:background="@drawable/history_selecter" />
+
+                <TextView
+                    style="@style/BottomPopItemText"
+                    android:text="历史"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pop_down_parent"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/pop_down"
+                    style="@style/BottomPopItem"
+                    android:background="@drawable/down_selecter" />
+
+                <TextView
+                    style="@style/BottomPopItemText"
+                    android:text="下载"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pop_seacher_parent"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/pop_seacher"
+                    style="@style/BottomPopItem"
+                    android:background="@drawable/search_selector" />
+
+                <TextView
+                    style="@style/BottomPopItemText"
+                    android:layout_marginTop="5dp"
+                    android:text="查找"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/pop_addmark_parent"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/pop_addmark"
+                    style="@style/BottomPopItem"
+                    android:background="@drawable/addmark_selecter" />
+
+                <TextView
+                    style="@style/BottomPopItemText"
+                    android:text="添加书签"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pop_refresh_parent"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/pop_refresh"
+                    style="@style/BottomPopItem"
+                    android:background="@drawable/img_clear" />
+
+                <TextView
+                    style="@style/BottomPopItemText"
+                    android:text="过滤"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pop_set_parent"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/pop_set"
+                    style="@style/BottomPopItem"
+                    android:background="@drawable/set_selector" />
+
+                <TextView
+                    style="@style/BottomPopItemText"
+                    android:text="设置"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pop_exite_parent"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/pop_exite"
+                    style="@style/BottomPopItem"
+                    android:background="@drawable/exite_selecter" />
+
+                <TextView
+                    style="@style/BottomPopItemText"
+                    android:text="退出"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

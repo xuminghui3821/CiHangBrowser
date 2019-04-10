@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainrootrl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true">
+
+    <LinearLayout
+        android:id="@+id/news_view_header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/base_color"
+        android:gravity="center"
+        android:orientation="vertical">
+        <!--android:gravity内部元素对齐方式-->
+        <!-- android:orientation该控件的内部排列方式-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/menu"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@mipmap/menu"/>
+                <LinearLayout
+                    android:id="@+id/text_context"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/ellipse_main"
+                    android:gravity="center"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="0dp">
+
+                    <LinearLayout
+                        android:id="@+id/url_logo"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/header_web_icon"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:src="@mipmap/default_logo" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/header_web_title"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:drawablePadding="8dp"
+                        android:focusable="false"
+                        android:gravity="center|start|left"
+                        android:hint="搜索或输入网址"
+                        android:lines="1"
+                        android:textColor="@color/gray"
+                        android:textColorHint="@color/gray"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/QRCode"
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:src="@mipmap/main_qrcode" />
+
+                    <ImageView
+                        android:id="@+id/refresh"
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:src="@drawable/refresh_default"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+            <!--
+            android:layout_centerVertical位于父控件是否垂直居中
+            paddingstart, paddingend 是新推出的标签在Android 4.2( V 17)起使用。在此之前使用的是paddingleft和paddingRight因此
+            如果要兼容所有版本 可写成一下模式
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            -->
+            <ProgressBar
+                android:id="@+id/progressBar1"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/xian" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/webView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/news_view_header_layout"
+        android:background="@color/white">
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/exit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:background="#aa333333"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="再次点击将退出浏览器"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:visibility="gone" />
+</RelativeLayout>

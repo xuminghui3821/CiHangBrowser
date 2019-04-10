@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_setting_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    tools:context="org.fanhuang.cihangbrowser.activity.setting.SettingMainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_title" />
+
+        <TextView
+            android:id="@+id/wisdom"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/layout_selecter_new"
+            android:gravity="center_vertical"
+            android:paddingLeft="23dp"
+            android:paddingRight="16dp"
+            android:text="慈航法语"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:id="@+id/setHome"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/layout_selecter_new"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/layout_selecter_new"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="23dp"
+                    android:paddingRight="16dp"
+                    android:text="设置主页"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/homepage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="23dp"
+                    android:paddingRight="16dp"
+                    android:text=""
+                    android:textColor="#888888"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:paddingRight="16dp"
+                android:src="@mipmap/ic_set_more" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/setSearch"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/layout_selecter_new">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/layout_selecter_new"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="23dp"
+                    android:paddingRight="16dp"
+                    android:text="默认搜索引擎"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/searchlogo"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:paddingRight="16dp"
+                android:src="@mipmap/ic_set_more" />
+
+            <TextView
+                android:id="@+id/now_search"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/searchlogo"
+                android:gravity="center"
+                android:paddingRight="16dp"
+                android:text="必应"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DCDCDC" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="13dp"
+            android:background="#F5F5F5" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DCDCDC" />
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/noImg"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/layout_selecter_new"
+            android:gravity="center_vertical"
+            android:paddingLeft="23dp"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="无图模式"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/noImgIcon"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                android:background="@mipmap/ic_setup_switch_on"
+                android:focusable="false" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/fontSize"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/layout_selecter_new"
+            android:drawableRight="@mipmap/ic_set_more"
+            android:gravity="center_vertical"
+            android:paddingLeft="23dp"
+            android:paddingRight="16dp"
+            android:text="文字大小"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DCDCDC" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="13dp"
+            android:background="#F5F5F5" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DCDCDC" />
+
+        <TextView
+            android:id="@+id/default_browser"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/layout_selecter_new"
+            android:gravity="center_vertical"
+            android:paddingLeft="23dp"
+            android:paddingRight="16dp"
+            android:text="设置默认浏览器"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+
+        <TextView
+            android:id="@+id/clean_pass"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/layout_selecter_new"
+            android:gravity="center_vertical"
+            android:paddingLeft="23dp"
+            android:paddingRight="16dp"
+            android:text="清除Cookies"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/clean_data"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/layout_selecter_new"
+            android:gravity="center_vertical"
+            android:paddingLeft="23dp"
+            android:paddingRight="16dp"
+            android:text="清除缓存"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/edition"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/layout_selecter_new"
+            android:drawableRight="@mipmap/ic_set_more"
+            android:gravity="center_vertical"
+            android:paddingLeft="23dp"
+            android:paddingRight="16dp"
+            android:text="软件版本"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/aboutour"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/layout_selecter_new"
+            android:drawableRight="@mipmap/ic_set_more"
+            android:gravity="center_vertical"
+            android:paddingLeft="23dp"
+            android:paddingRight="16dp"
+            android:text="关于我们"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DCDCDC" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/yincang"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

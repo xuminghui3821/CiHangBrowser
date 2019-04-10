@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@mipmap/top_bg_blue"
+    android:orientation="horizontal">
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:id="@+id/back"
+        android:layout_width="35dp"
+        android:layout_marginLeft="15dp"
+        android:layout_height="match_parent"
+        android:paddingEnd="12dp"
+        android:paddingStart="12dp"
+        app:mrl_rippleColor="#A9A9A9"
+        app:mrl_rippleDuration="100">
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center"
+            android:background="@mipmap/back_default" />
+
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_marginLeft="15dp"
+        android:text="添加书签"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+</LinearLayout>

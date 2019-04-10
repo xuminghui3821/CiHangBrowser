@@ -1,0 +1,106 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.jakewharton.butterknife'
+
+android {
+    compileSdkVersion 26 //使用哪个版本Android SDK编译你的应用
+    buildToolsVersion '26.0.2'
+    signingConfigs {
+        config {
+            keyAlias 'xiaohuihui'
+            keyPassword '123123'
+            File strFile = new File("../xiaohuihui.jks")
+            storeFile file(strFile)
+            storePassword '123123'
+        }
+    }
+    defaultConfig {
+        applicationId "org.fanhuang.cihangbrowser"
+        minSdkVersion 14//minSdkVersion限制安装application所需要的系统最低版本，低于该版本的系统都不可以安装该application
+        targetSdkVersion 26//targetSdkVersion是Android提供向前兼容的主要依据，表明该application已经兼容从minSdkVersion至tartgetSdkVersion之间所有api的变化。在targetSdkVersion更新之前系统不会应用最新的行为变化。
+        /*他们三者的关系
+        minSdkVersion <= targetSdkVersion <= compileSdkVersion
+        理想情况下应该是
+        minSdkVersion (lowest possible) <=targetSdkVersion == compileSdkVersion (latest SDK)*/
+        versionCode 1
+        versionName "0.1"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters "armeabi"//, "armeabi-v7a", "x86", "mips"
+            // // 指定要ndk需要兼容的架构(这样其他依赖包里mips,x86,armeabi,arm-v8之类的so会被过滤掉)
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+    }
+}
+
+apply plugin: 'org.greenrobot.greendao'
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.0'
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.2.2' // add plugin
+    }
+}
+
+greendao {
+    schemaVersion 2//指定数据库schema版本号，迁移等操作会用到
+    daoPackage 'org.fanhuang.cihangbrowser.gen'//通过gradle插件生成的数据库相关文件的包名，默认为你的entity所在的包名
+    targetGenDir 'src/main/java'//可以将生成的文件放到我们的java目录中，而不是build中，这样就不用额外的设置资源目录了
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //implementation project(':library')
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
+    compile 'com.android.support:design:26.+'
+    compile 'com.github.rey5137:material:1.2.2'
+    compile 'com.android.support:cardview-v7:26.+'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:0.5'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:2.2.2'
+    compile 'com.android.support:multidex:1.0.0'
+    //为了解决方法数超过65535问题
+    compile 'com.jakewharton:butterknife:8.4.0'
+    //ButterKnife是一个专注于Android系统的View注入框架,可以减少大量的findViewById以及setOnClickListener代码，可视化一键生成。
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    compile 'com.jude:rollviewpager:1.4.5'
+    //图片轮播效果开源框架
+    //            {//如果两个第三方包同时引入 support-v4 包，那么只需要在其中一个的引入地方添加 exclude 语句否则会产生错误
+    //                exclude group: "com.android.support", module: "support-v4"
+    //            }
+    compile 'me.yokeyword:fragmentation:0.10.1'
+    //YoKey大神的Fragment库Fragmentation，主要用于现在App经常需要实现的单Activity+多Fragment以及多Activity+多Fragment的形式架构。同时最最重要的是，它帮助我们封装了很多好用的方法，解决了一些官方Fragment库中存在的一些Bug。
+    compile 'org.xutils:xutils:3.5.0'
+    //一个工具库 提供有ViewUtils模块、BitmapUtils模块、DbUtils模块、HttpUtils模块。
+    //implementation project(':library')
+    compile('jameson.io.library:library:0.0.1') {//里面存放了一些工具
+        exclude group: "com.android.support", module: "support-v4"
+    }
+    implementation files('libs/BaiduLBS_Android.jar')
+    compile 'org.greenrobot:greendao:3.2.2'
+
+
+//二维码扫描
+    compile 'com.google.zxing:core:3.2.1'
+    compile 'cn.bingoogolapple:bga-qrcodecore:1.1.3@aar'
+    compile 'cn.bingoogolapple:bga-zxing:1.1.3@aar'
+
+    compile 'com.balysv:material-ripple:1.0.2'//按钮的水滴效果
+    compile 'com.mcxiaoke.volley:library:1.+'//网络通讯架构
+    compile 'com.squareup.picasso:picasso:2.5.2'//图像下载和缓存库
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'//优化Adapter代码:和原始的adapter相对，减少70%的代码量。
+
+    compile 'com.tencent.bugly:crashreport_upgrade:latest.release'//其中latest.release指代最新版本号，也可以指定明确的版本号，例如1.2.0
+    compile 'com.tencent.bugly:nativecrashreport:latest.release' //其中latest.release指代最新版本号，也可以指定明确的版本号，例如2.2.0
+
+}

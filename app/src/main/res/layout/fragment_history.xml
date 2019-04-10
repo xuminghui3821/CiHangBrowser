@@ -1,0 +1,93 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.fanhuang.cihangbrowser.fragment.HistoryFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:id="@+id/r1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ExpandableListView
+            android:id="@+id/expanded_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/view"
+            android:divider="@null" />
+
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_above="@+id/l1"
+            android:background="@color/xian" />
+
+        <RelativeLayout
+            android:id="@+id/no"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_above="@+id/view">
+
+            <ImageView
+                android:id="@+id/fragment_history_iv"
+                android:src="@drawable/no_history"
+                android:layout_width="130dp"
+                android:layout_height="130dp" />
+
+            <TextView
+                android:layout_below="@id/fragment_history_iv"
+                android:layout_width="130dp"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="暂无历史记录"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/l1"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="center">
+
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:id="@+id/delete"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                app:mrl_rippleColor="#A9A9A9"
+                app:mrl_rippleDuration="100">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@mipmap/history_clear"
+                        android:focusable="true" />
+
+                    <TextView
+                        android:id="@+id/deleteText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:focusable="true"
+                        android:text="清除历史"
+                        android:textColor="@color/gray"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </com.balysv.materialripple.MaterialRippleLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

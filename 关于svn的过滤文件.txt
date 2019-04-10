@@ -1,0 +1,9 @@
+1、.idea文件夹
+
+2、.gradle文件夹
+
+3、所有的build文件夹
+
+4、所有的.iml文件
+
+5、local.properties文件。

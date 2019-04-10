@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="org.fanhuang.cihangbrowser.activity.setting.SettingAboutOurActivity">
+    <include layout="@layout/layout_title" />
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="15dp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/x5" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="感恩腾讯X5提供核心技术"
+        android:textSize="20sp" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:textSize="14sp"
+        android:background="@color/white"
+        android:text="@string/aboutour" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DCDCDC" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="13dp"
+        android:background="#F5F5F5" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DCDCDC" />
+    <TextView
+        android:id="@+id/weixin"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/layout_selecter_new"
+        android:drawableRight="@mipmap/ic_set_more"
+        android:gravity="center_vertical"
+        android:paddingLeft="23dp"
+        android:paddingRight="16dp"
+        android:text="微信公众号"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+    <TextView
+        android:id="@+id/yigong"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/layout_selecter_new"
+        android:drawableRight="@mipmap/ic_set_more"
+        android:gravity="center_vertical"
+        android:paddingLeft="23dp"
+        android:paddingRight="16dp"
+        android:text="义工招募"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+    <!--<TextView-->
+        <!--android:id="@+id/juanzhu"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:background="@drawable/layout_selecter_new"-->
+        <!--android:drawableRight="@mipmap/ic_set_more"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:paddingLeft="23dp"-->
+        <!--android:paddingRight="16dp"-->
+        <!--android:text="捐助"-->
+        <!--android:textColor="@color/black"-->
+        <!--android:textSize="16sp" />-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DCDCDC" />
+</LinearLayout>

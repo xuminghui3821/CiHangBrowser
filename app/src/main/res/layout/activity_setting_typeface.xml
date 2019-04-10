@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_setting_typeface"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.fanhuang.cihangbrowser.activity.setting.SettingTypefaceActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_title" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center_vertical"
+            android:paddingEnd="16dp"
+            android:paddingStart="23dp"
+            android:text="网页字体大小预览"
+            android:textColor="@color/gray"
+            android:textSize="14sp"
+            android:paddingRight="16dp"
+            android:paddingLeft="23dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/xian" />
+
+        <TextView
+            android:id="@+id/typeface"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:gravity="center"
+            android:text="@string/jingangjing"
+            android:textColor="@color/black" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/xian" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:gravity="center_vertical"
+            android:paddingEnd="16dp"
+            android:paddingStart="23dp"
+            android:text="点击字体调整字体大小"
+            android:textColor="@color/gray"
+            android:textSize="14sp"
+            android:paddingRight="16dp"
+            android:paddingLeft="23dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp">
+
+            <RadioGroup
+                android:id="@+id/radio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <RadioButton
+                    android:id="@+id/small"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="小"
+                    android:textColor="@drawable/radiobutton"
+                    android:textSize="10sp" />
+
+                <RadioButton
+                    android:id="@+id/in"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="中"
+                    android:textColor="@drawable/radiobutton"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/standard"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="标准"
+                    android:textColor="@drawable/radiobutton"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/big"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="大"
+                    android:textColor="@drawable/radiobutton"
+                    android:textSize="21sp" />
+
+                <RadioButton
+                    android:id="@+id/super_big"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="超大"
+                    android:textColor="@drawable/radiobutton"
+                    android:textSize="24sp" />
+            </RadioGroup>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

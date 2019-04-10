@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.fanhuang.cihangbrowser.activity.NewDownloadActiviy">
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@mipmap/top_bg_blue">
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/back"
+            android:layout_width="35dp"
+            android:layout_marginLeft="15dp"
+            android:layout_alignParentLeft="true"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:paddingEnd="12dp"
+            android:paddingStart="12dp"
+            app:mrl_rippleColor="#A9A9A9"
+            app:mrl_rippleDuration="100">
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="22dp"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/back_default"
+                android:layout_gravity="center" />
+
+        </com.balysv.materialripple.MaterialRippleLayout>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+        app:tabIndicatorColor="@color/transparent"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextAppearance="@style/TabLayoutTextStyle"
+            app:tabTextColor="@color/white" />
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title" />
+
+
+</RelativeLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#333333</color>
+    <color name="black2">#474747</color>
+    <color name="gray">#a4a4a4</color>
+    <color name="gray_two">#7c7c7c</color>
+    <color name="light_blue">#6593cb</color>
+    <color name="base_color">#3b94ea</color>
+    <color name="xian">#e6e6e6</color>
+    <color name="textdis">#f6f6f6</color>
+    <color name="xixian">#a8a8a8</color>
+    <color name="no">#326496</color>
+    <color name="navigationBarColor">#f46444</color>
+
+    <color name="nattier_blue">#ffB1f9fc</color>
+    <color name="colorPrimaryDarkTrans">#CCf57257</color>
+
+    <color name="hha">#FFFFFF</color>
+    <color name="headcolor">#efeff0</color>
+
+    <color name="xiaomi">#FF731E</color>
+    <!--互配-->
+    <color name="rad_button">#c7c7c7</color>
+    <color name="text_back">#3fa1f8</color>
+
+    <color name="list_color">#e3e3e3</color>
+    <color name="s_button">#ececec</color>
+
+    <color name="colorInitFloatBackground">#b0ffffff</color>
+    <color name="colorCollapsedFloatBackground">#e4e4e4</color>
+    <color name="menu_color">#0000</color>
+
+    <!--蓝色渐变-->
+    <color name="blueStartColor">#1588F4</color>
+    <color name="blueEndColor">#2AA9FE</color>
+
+    <!--兑换颜色-->
+    <color name="tradeSuccess">#87cc5d</color>
+    <color name="tradeFalse">#fd7d82</color>
+    <color name="trading">#fd9a72</color>
+</resources>
